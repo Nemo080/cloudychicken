@@ -1,13 +1,25 @@
 /* *{
     box-sizing: border-box;
 } */
+ 
+/* General Styles */
 body {
     background-color: #FAD89A;
-    font-family: "Roboto", serif;
+    /* font-family: "Roboto", serif; */
+    font-family: "Lexend-Deca", sans-serif;
     margin: 0;
     padding: 0;
+    text-align: center;
     /* padding-top: 100px; */
 }
+
+/* *{
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  /* font-family: "Lexend-Deca", "Roboto", sans-serif; */
+
+
 
 ul {
     list-style-type: none;
@@ -211,5 +223,266 @@ video {
 }
 .poster :hover{
     background-color: #FFE9C1;
-    width: 300px;
+    width: 300px;}
+
+/* About Us Styles */
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+h1{
+  font-family: "Roboto", sans-serif;
+}
+
+h4{
+  margin-top:10px;
+  font-weight: 400;
+}
+
+.name > h2{
+font-weight: 500;
+font-family: "Lexend-Deca", sans-serif;
+}
+
+/* Carousel Container */
+.main {
+  /* min-width: 100%; For mobile, adjust to change arrow position */
+  width: 85%;
+  margin: auto; 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centers content */
+  /* overflow: hidden; /* Prevents unwanted scrolling */
+  
+} 
+
+
+
+/* Carousel */
+.carousel-container {
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+  display: flex;
+  /* align-items: center;
+  justify-content: center;
+   */
+  overflow: hidden;
+}
+
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; /* 4 slides, each taking 100% width */
+}
+
+/* Individual Cards */
+.card {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  padding: 20px;
+  height:auto;
+  background: #FFE9C1;
+  border-radius: 10px;
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  flex-direction: row; /* Stack elements horizontally */
+  align-items: center; /* Center content */
+  position:relative;
+  gap: 10px;
+  z-index: 1;
+}
+
+/* Card Text */
+.text{
+  display:flex;
+  flex-direction: column;
+  gap: 25px;
+  padding:10px;
+  max-width: 60%;
+}
+
+/* Responsive Image */
+.pic {
+  width: 100%;
+    max-width: 300px; /* Adjust image size */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+/* Ensure blurb fits well */
+.blurb {
+  /* max-width: 80%; Prevents text from stretching too wide */
+  font-size: 16px; /* Adjust text size */
+  line-height: 1.4; /* Improves readability */
+  word-wrap: break-word;
+  overflow-wrap: break-word; /* Ensures text doesn't overflow */
+}
+
+/* Navigation Buttons */
+.button {
+  position:absolute;
+  top: 50%;
+  font-size: 5rem; /* Adjust to your preference */
+  color: #8e6641;  /* Button color */
+  cursor: pointer;
+  transform: translateY(-50%);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px 15px;
+ 
+}
+
+
+/* Previous (Left Facing) Button */
+.prev{
+  left: 5%; /* Position left for previous button */
+ }
+
+/* Next (Right Facing) Button */
+.next{
+  right: 5%;
+}
+
+.button:hover {
+  color:#6A4624;
+}
+
+/* Section Indicators */
+.indicator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  margin: 5px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #FFE9C1;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.indicator.active {
+  background-color: #FFFFFF;
+}
+
+.divider{
+ width: 726px;
+ border: 5px solid #8E6641;
+ border-radius: 20px;
+ margin: 60px auto ;
+}
+
+.about-heading{
+  margin-top:60px;
+  gap: 10px;
+}
+
+
+.maincontainer{
+  perspective: 1000px;
+  width:100%;
+  height: 100%;
+  display: flex;
+  border-radius: 21px;
+  margin-top: 50px;
+  /* background: green; */
+  border-radius: 21px;    
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  justify-content: center;
+  column-gap: 25px;
+}
+
+.thecard{
+  position: relative;
+  width:245px;
+  height: 352px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+  background: #FFE9C1;
+  border-radius: 21px;
+  will-change: transform;
+}
+
+.thecard:hover{
+  transform: rotateY(180deg);
+  border:6px solid #8E6641;
+  cursor: pointer;
+  
+}
+.thefront, .theback{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theback{
+  transform: rotateY(180deg);
+}
+
+.solo{
+  width: 100%; /* Adjust image size */
+  height: auto;
+  padding-top: 30%;
+
+}
+
+.profile{
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+
+}
+
+.finn{
+  object-fit: scale-down;
+}
+
+
+.name{
+  padding: 10px;
+ 
+}
+
+
+
+
+/* Adjust for Smaller Screens */
+
+@media (max-width: 1420px) {
+
+  .prev{
+    left: 0%; /* Position left for previous button */
+   }
+  
+  /* Next (Right Facing) Button */
+  .next{
+    right: 0%;
+  }
+
+  .carousel-container {
+    width:85%;
+  }
+
 }
