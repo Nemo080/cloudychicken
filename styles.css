@@ -1,3 +1,215 @@
+/* *{
+    box-sizing: border-box;
+} */
 body {
-    background-color: orange;
+    background-color: #FAD89A;
+    font-family: "Roboto", serif;
+    margin: 0;
+    padding: 0;
+    /* padding-top: 100px; */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+li {
+    display:inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    position: relative;
+
+}
+.Navbar{
+    margin: 20px 0px 20px 0px;
+    vertical-align: middle;
+    height: 70px;
+    width: 100%;
+    /* position: fixed; */
+    position: relative;
+    /* backdrop-filter: blur(5px); */
+    /* background: rgba(0, 0, 0, 0.5); */
+}
+
+.NavLogo{
+    width: 150px;
+    float: left;
+    margin-left: 30px;
+}
+.NavItems{
+    font-family: "Lexend Deca", serif;
+    padding: 30px 0 0 0;
+    font-size: 20px;
+    margin: 0 60px 0 0px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+/* .NavItems:last-child{
+    margin-right: 0;
+    margin-left: 0;
+} */
+.NavItems::after{
+    content:'';
+    height: 4px;
+    left: 0;
+    bottom:-10px;
+    width: 0;
+    background:  #8E6641;
+    transition: width .2s;
+    position: absolute;
+    border-radius: 10px;
+}
+.NavItems:hover:after{
+    width: 100%;
+}
+
+.submenu {
+    position: absolute;
+    width: 160px;
+    height: 50px;
+    background-color: #FFE9C1;
+    /* box-shadow: 0 15px 45px #8E6641; */
+    border-radius: 10px;
+    border: solid #8E6641;
+    top: 130%; /* Positions submenu right below the parent */
+    left: 0px;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease, z-index 0.3s ease;
+    text-align: center;
+    visibility: hidden;
+    pointer-events: none;
+    padding-top: 5px;
+}
+.submenu a{
+    color: black;
+    text-decoration: none;
+    font-family: "Lexend Deca", serif;
+    font-size: 20px;
+    margin: 5px;
+}
+.dropdown:hover > .submenu, .submenu:hover {
+    opacity: 1;
+    z-index: 99;
+    visibility: visible;
+    pointer-events: auto; 
+}
+
+.dropdown {
+    position: relative;
+}
+.dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 30px; /* Creates a hover buffer area */
+    background: transparent;
+    padding-bottom: 50px;
+}
+.submenu a::after {
+    content: '';
+    height: 4px;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    background: #8E6641; /* Same color as Works */
+    transition: width 0.2s;
+    position: absolute;
+    border-radius: 10px;
+}
+   
+.submenu a:hover::after {
+    width: 100%;
+}
+
+/* Style the video as a full-page background */
+video {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Video fills the entire viewport height (hero section) */
+    object-fit: cover; /* Ensures the video covers the screen without distortion */
+    z-index: -1; /* Keeps the video behind other elements */
+}
+
+.home-works-underline{
+    height: 10px;
+    left: 0;
+    bottom: 20px;
+    width: 50%;
+    background:  #8E6641;
+    position: relative;
+    border-radius: 30px;
+    display: center;
+    align-items: center;
+    margin: auto;
+
+}
+.home-works{
+    font-size: 50px; 
+    text-align: center;
+}
+
+.comingsoon{
+    font-family: "Lexend Deca", serif;
+    font-size: 36px;
+    font-weight:400;
+    display: flex;
+    margin-top: 30px;
+    /* margin-top:auto;
+    margin-bottom: auto; */
+
+}
+.CSarrow{
+    background:#8E6641;
+    height: 13px;
+    width: 192px;
+    margin-top:50px;
+    border-bottom-right-radius: 30px;
+}
+.CSheader{
+    margin-left: 50px;
+}
+.CSevening{
+    font-family: "Lexend Deca", serif;
+    display: flex;
+    margin-top: 30px;
+    margin-top:auto;
+    margin-bottom: auto;
+}
+.list{
+    background-color: #FFE9C1;
+    font-size: 24px;
+    height: 31px;
+    width: 42px;
+    text-align: center;
+    margin-left: 5%;
+}
+.text-list{
+    margin-left: 130px;
+    font-size: 24px;
+    margin-top: 0px;
+    text-decoration: none;
+    color: black;
+    
+}
+.poster{
+    width: 250px;
+    margin-left: 20rem;
+    margin-top:auto;
+    margin-bottom: auto;
+    float: right;
+    display: block;
+}
+.poster :hover{
+    background-color: #FFE9C1;
+    width: 300px;
 }
