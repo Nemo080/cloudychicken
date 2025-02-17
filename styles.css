@@ -13,12 +13,12 @@ body {
     /* padding-top: 100px; */
 }
 
-*{
+/* *{
   box-sizing:border-box;
   margin: 0;
   padding: 0;
-  font-family: "Lexend-Deca", "Roboto", sans-serif;
-}
+  /* font-family: "Lexend-Deca", "Roboto", sans-serif; */
+
 
 
 ul {
@@ -225,7 +225,7 @@ video {
     background-color: #FFE9C1;
     width: 300px;}
 
-
+/* About Us Styles */
 
 header {
   text-align: center;
