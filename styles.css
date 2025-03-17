@@ -1,7 +1,7 @@
 /* *{
-    box-sizing: border-box;
+  box-sizing: border-box;
 } */
- 
+
 /* General Styles */
 body {
     background-color: #FAD89A;
@@ -17,10 +17,14 @@ body {
 
 
 /* *{
-  box-sizing:border-box;
-  margin: 0;
-  padding: 0;
-  /* font-family: "Lexend-Deca", "Roboto", sans-serif; */
+box-sizing:border-box;
+margin: 0;
+padding: 0;
+/* font-family: "Lexend-Deca", "Roboto", sans-serif; */
+
+/* ------------------------------------------------------------------- */
+
+/* Scroll bar styles starts here */
 
 /* width */
 ::-webkit-scrollbar {
@@ -44,6 +48,11 @@ body {
   background: #6A4624;
 }
 
+
+/* ------------------------------------------------------------------- */
+
+/* Navigation Header Styles Starts here */
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -52,201 +61,330 @@ ul {
 }
 
 li {
-    display:inline-flex;
-    vertical-align: middle;
-    align-items: center;
-    position: relative;
+  display:inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  position: relative;
 
 }
+
 .Navbar{
-    margin: 20px 0px 20px 0px;
-    vertical-align: middle;
-    height: 70px;
-    width: 100%;
-    /* position: fixed; */
-    position: relative;
-    /* backdrop-filter: blur(5px); */
-    /* background: rgba(0, 0, 0, 0.5); */
+  margin: 0px 0px 20px 0px;
+  vertical-align: middle;
+  height: 70px;
+  width: 100%;
+  position: relative;
 }
 
-.NavLogo{
-    width: 150px;
-    float: left;
-    margin-left: 30px;
+.Logo{
+  width: 150px;
+  float: left;
+  margin-left: 40px;
 }
 .NavItems{
-    font-family: "Lexend Deca", serif;
-    padding: 30px 0 0 0;
-    font-size: 20px;
-    margin: 0 60px 0 0px;
-    cursor: pointer;
-    color: black;
-    text-decoration: none;
-    position: relative;
+  font-family: "Lexend Deca", serif;
+  padding: 30px 0 0 0;
+  font-size: 20px;
+  margin: 0 60px 0 0px;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  position: relative;
 }
 /* .NavItems:last-child{
-    margin-right: 0;
-    margin-left: 0;
+  margin-right: 0;
+  margin-left: 0;
 } */
 .NavItems::after{
-    content:'';
-    height: 4px;
-    left: 0;
-    bottom:-10px;
-    width: 0;
-    background:  #8E6641;
-    transition: width .2s;
-    position: absolute;
-    border-radius: 10px;
+  content:'';
+  height: 4px;
+  left: 0;
+  bottom:-10px;
+  width: 0;
+  background:  #8E6641;
+  transition: width .2s;
+  position: absolute;
+  border-radius: 10px;
 }
 .NavItems:hover:after{
-    width: 100%;
+  width: 100%;
 }
 
 .submenu {
-    position: absolute;
-    width: 160px;
-    height: 50px;
-    background-color: #FFE9C1;
-    /* box-shadow: 0 15px 45px #8E6641; */
-    border-radius: 10px;
-    border: solid #8E6641;
-    top: 130%; /* Positions submenu right below the parent */
-    left: 0px;
-    opacity: 0;
-    z-index: -1;
-    transition: opacity 0.3s ease, z-index 0.3s ease;
-    text-align: center;
-    visibility: hidden;
-    pointer-events: none;
-    padding-top: 5px;
+  position: absolute;
+  width: 160px;
+  height: 50px;
+  background-color: #FFE9C1;
+  /* box-shadow: 0 15px 45px #8E6641; */
+  border-radius: 10px;
+  border: solid #8E6641;
+  top: 130%; /* Positions submenu right below the parent */
+  left: 0px;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease, z-index 0.3s ease;
+  text-align: center;
+  visibility: hidden;
+  pointer-events: none;
+  padding-top: 5px;
 }
 .submenu a{
-    color: black;
-    text-decoration: none;
-    font-family: "Lexend Deca", serif;
-    font-size: 20px;
-    margin: 5px;
+  color: black;
+  text-decoration: none;
+  font-family: "Lexend Deca", serif;
+  font-size: 20px;
+  margin: 5px;
 }
 .dropdown:hover > .submenu, .submenu:hover {
-    opacity: 1;
-    z-index: 99;
-    visibility: visible;
-    pointer-events: auto; 
+  opacity: 1;
+  z-index: 99;
+  visibility: visible;
+  pointer-events: auto; 
 }
 
 .dropdown {
-    position: relative;
+  position: relative;
 }
 .dropdown::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 30px; /* Creates a hover buffer area */
-    background: transparent;
-    padding-bottom: 50px;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 30px; /* Creates a hover buffer area */
+  background: transparent;
+  padding-bottom: 50px;
 }
 .submenu a::after {
-    content: '';
-    height: 4px;
-    left: 0;
-    bottom: -1px;
-    width: 0;
-    background: #8E6641; /* Same color as Works */
-    transition: width 0.2s;
-    position: absolute;
-    border-radius: 10px;
+  content: '';
+  height: 4px;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  background: #8E6641; /* Same color as Works */
+  transition: width 0.2s;
+  position: absolute;
+  border-radius: 10px;
 }
-   
+  
 .submenu a:hover::after {
-    width: 100%;
+  width: 100%;
 }
+/* Navigation header styles end here */
 
+/* ------------------------------------------------------------------- */
+
+/* Hero section styles starts here */
 /* Style the video as a full-page background */
 video {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* Video fills the entire viewport height (hero section) */
-    object-fit: cover; /* Ensures the video covers the screen without distortion */
-    z-index: -1; /* Keeps the video behind other elements */
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Video fills the entire viewport height (hero section) */
+  object-fit: cover; /* Ensures the video covers the screen without distortion */
+  z-index: -1; /* Keeps the video behind other elements */
 }
+/* Hero section styles end here */
+
+/* ------------------------------------------------------------------- */
+
+/* Content section styles of the homepage starts here */
 
 .home-works-underline{
-    height: 10px;
-    left: 0;
-    bottom: 20px;
-    width: 50%;
-    background:  #8E6641;
-    position: relative;
-    border-radius: 30px;
-    display: center;
-    align-items: center;
-    margin: auto;
+  height: 10px;
+  left: 0;
+  bottom: 20px;
+  width: 50%;
+  background:  #8E6641;
+  position: relative;
+  border-radius: 30px;
+  display: center;
+  align-items: center;
+  margin: auto;
 
 }
 .home-works{
-    font-size: 50px; 
-    text-align: center;
+  font-size: 50px; 
+  text-align: center;
 }
 
 .comingsoon{
-    font-family: "Lexend Deca", serif;
-    font-size: 36px;
-    font-weight:400;
-    display: flex;
-    margin-top: 30px;
-    /* margin-top:auto;
-    margin-bottom: auto; */
-
+  font-family: "Lexend Deca", serif;
+  font-size: 36px;
+  font-weight:400;
+  display: flex;
+  margin-top: 30px;
 }
 .CSarrow{
-    background:#8E6641;
-    height: 13px;
-    width: 192px;
-    margin-top:50px;
-    border-bottom-right-radius: 30px;
+  background:#8E6641;
+  height: 13px;
+  width: 192px;
+  margin-top:50px;
+  border-bottom-right-radius: 30px;
 }
 .CSheader{
-    margin-left: 50px;
+  margin-left: 50px;
 }
 .CSevening{
-    font-family: "Lexend Deca", serif;
-    display: flex;
-    margin-top: 30px;
-    margin-top:auto;
-    margin-bottom: auto;
+  font-family: "Lexend Deca", serif;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: auto;
+  min-height: 65vh;
 }
 .list{
-    background-color: #FFE9C1;
-    font-size: 24px;
-    height: 31px;
-    width: 42px;
-    text-align: center;
-    margin-left: 5%;
+  background-color: #FFE9C1;
+  font-size: 24px;
+  height: 31px;
+  width: 42px;
+  text-align: center;
+  margin-left: 5%;
 }
+
 .text-list{
-    margin-left: 130px;
-    font-size: 24px;
-    margin-top: 0px;
-    text-decoration: none;
-    color: black;
-    
+  margin-left: 130px;
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+  height: 0px;
 }
+/* .text-list:hover{
+  background-image: url('HomepageAssets/poster.PNG');
+} */
 .poster{
-    width: 250px;
-    margin-left: 20rem;
-    margin-top:auto;
-    margin-bottom: auto;
+  width: 300px;
+  margin-top:auto;
+  margin-bottom: auto;
+  position: absolute;
+  left: 55%;
+  /* background-image: url('HomepageAssets/poster.PNG'); */
+}
+/* .poster:hover{
+  background-color:black;
+  width: 350px;
+  display: center;
+} */
+
+/* Content section styles ends here*/
+
+/* ------------------------------------------------------------------- */
+
+/* Footer section styles starts here */
+.footer-gradient{
+  background-image: linear-gradient(#FAD89A, #FFE9C1);
+  display: flex;
+}
+section{
+  margin-top: 3rem;
+  width: 100%;
+}
+footer{
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  font-family: "Lexend Deca", serif;
+}
+.footer-border-left{
+  background-color:#8E6641;
+  height: 10px;
+  width: 55%;
+  float: left;
+  border-bottom-right-radius: 30px;
+}
+.footer-border-right{
+  background-color:#8E6641;
+  height: 10px;
+  width: 55%;
+  float:right;
+  margin-top: 20px;
+  border-top-left-radius: 30px;
+}
+.footer-content{
+  /* margin-bottom: 2rem; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-copy{
+  display: flex;
+  flex-direction: column;
+  float: left;
+
+}
+.copyright{
+  float: left;
+  margin-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+.footer-aboutus{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.social-media{
+  font-size: 20px;
+  margin-right: 30px;
+}
+.social{
+  width: 30px;
+  /* margin-right: 20px; */
+}
+
+/* Footer section styles ends here */
+
+/* ------------------------------------------------------------------- */
+
+/* Homepage responsibility styles starts here */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
     float: right;
     display: block;
+    color:#6A4624;
+  }
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+ .topnav.responsive.NavItems{
+  display: inline;
+ }
+  .NavItems{
+    display: none;
+  }
+  .fa.fa-bars{
+    font-size: 25px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  .Navbar{
+    margin: 0px;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .Logo{
+    width: 100px;
+    margin-left: 10px;
+  }
 }
-.poster :hover{
-    background-color: #FFE9C1;
-    width: 300px;}
+.topnav .icon{
+  display: none;
+}
+
+
+
+/* ------------------------------------------------------------------- */
 
 /* About Us Styles */
 
@@ -916,16 +1054,13 @@ gap:87px;
 }
 
 /* FOOTER SECTION */
-.footer-gradient{
+/* .footer-gradient{
   background-image: linear-gradient(#FAD89A, #FFE9C1);
   display: flex;
 }
 section{
   margin-top: 3rem;
   width: 100%;
-
-  /* background-image: url('NavbarAssets/CloudyChickenLogo.png'); /
-  / background-repeat: no-repeat; */
 }
 footer{
   margin-top: 3rem;
@@ -977,7 +1112,7 @@ footer img{
   color: black;
   font-size: 20px;
   margin: auto;
-}
+} */
 
 
 .fa-caret-down{

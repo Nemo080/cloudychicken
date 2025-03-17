@@ -4,22 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="scripts" href="scripts.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/x-icon" href="HomepageAssets/favicon.PNG">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Evening's End</title>
 </head>
 <body>
-    <header class=" Navbar">
-        <a href="index.html"><img class="NavLogo" src="NavbarAssets/CloudyChickenLogo.png" alt="CloudyChickenLogo"/></a>
+    <header class=" topnav Navbar" id="myTopnav">
+        <a href="index.html"><img class="Logo" src="NavbarAssets/CloudyChickenLogo.png" alt="CloudyChickenLogo"/></a>
         <nav>
             <ul>
                 <li><a href="index.html" class="NavItems">Home</a></li>
-                <li class="dropdown"><a href="#" class="NavItems">Works</a>
+                <li class="dropdown"><p class="NavItems">Works</p>
                     <ul class="submenu">
                         <li><a href="EveningsEnd.html">Evening's End</a></li>
                     </ul>
                 </li>
-                <li><a href="" class="NavItems">About Us</a></li>    
+                <li><a href="about.html" class="NavItems">About Us</a></li>    
             </ul>
         </nav>
     </header>
+    <div class="footer-gradient">
+        <section>
+          <span class="footer-border-left"></span>
+          <span class="footer-border-right"></span>
+          <footer>
+            <div class="footer-content">
+              <div class="footer-copy">
+              <a href="index.html"><img class="Logo" src="NavbarAssets/CloudyChickenLogo.png" alt="CloudyChickenLogo" /></a>
+              <p class="copyright">&copy;
+                <script>document.write(new Date().getFullYear())</script> CloudyChicken
+              </p>
+            </div>
+              <div class="middle">
+                <a href="about.html" class="footer-aboutus">About Us</a>
+                <p>Get in Touch: <br> CloudyChicken.studio@gmail.com</p>
+              </div>
+            </div>
+          </footer>
+        </section>
+      </div>
 </body>
 </html>
