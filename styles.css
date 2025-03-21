@@ -1574,23 +1574,40 @@ font-size:30px;
   flex-direction: column;
 }
 
-.group-test{
+/* .group-test{
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 .social-icon{
   width: 40px;
   height: 40px;
 }
 
-.group-three{
+/* .group-three{
   flex-direction: column;
 }
 
 .group-one{
-  flex-direction: row;
+  flex-direction: column;
+ 
+} */
+
+
+
+.main-group {
+  flex-wrap: wrap; /* Ensures wrapping */
+}
+
+.group-one,
+.group-two {
+  flex: 1 1 50%; /* Still side by side */
+}
+
+.group-three {
+  flex: 1 1 100%; /* Moves it below */
+  order: 3; /* Ensures it is positioned last */
 }
 
 .id-title{
