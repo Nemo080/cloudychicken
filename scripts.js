@@ -278,8 +278,8 @@ function updateFunFactsText() {
     const funFactsElement = document.querySelector('.funfacts-text');
 
     if (funFactsElement) {
-        if (window.innerWidth <= 660) {
-            funFactsElement.textContent = "Fun Facts"; // Change text for mobile
+        if (window.innerWidth <= 960) {
+            funFactsElement.textContent = "Fun Facts "; // Change text for mobile
         } else {
             funFactsElement.textContent = "Fun Facts (hover each icon to view)"; // Default text for desktop
         }
