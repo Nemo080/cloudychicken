@@ -1562,7 +1562,7 @@ font-size:30px;
 
 .icons-container{
   flex-direction: column;
-  align-items: flex-start
+  align-items: flex-start;
 }
 
 .funfacts-container{
@@ -1652,7 +1652,7 @@ font-size:30px;
 
 /* Extra SMALL MOBILE */
 @media (max-width:320px){
-  body{
+body{
     color:orange;
   }
   .indicator-container{
@@ -1671,13 +1671,100 @@ font-size:30px;
     margin-right: 15%;
   }
 
+}
+/* MOBILE Large */
+@media (max-width:475px){
+  
   .id-title{
-    font-size:20px;
+    font-size:25px;
    } 
 
  .issue{
   font-size:20px;
  }
+
+ .id-all {
+  width: 110px;
+  height: 125px;
 }
 
+.id-name>h3 {
+  font-size: 24px;
+}
+
+.main-group{
+  column-gap: 3%;
+}
+
+.roles-container > h5, .roles-container > h6 {
+font-size:20px;
+}
+
+.id-name > h6, .roles >h6, .funfacts > h6 {
+  font-size: 17px;
+}
+.tooltiptext{
+margin:4px;
+padding:2px;
+font-size:10px;
+left:400%;
+width:500%;
+}
+.quote{
+  font-size:14px;
+}
+}
+
+@media(max-width:376px){
+  .id-title{
+    font-size:22px;
+   } 
+
+ .issue{
+  font-size:17px;
+ }
+
+ .id-all {
+  width: 90px;
+  height: 90px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+}
+.id-name>h3 {
+  font-size: 21px;
+}
+
+.main-group{
+  column-gap: 3%;
+}
+
+.roles-container > h5, .roles-container > h6 {
+font-size:17px;
+}
+
+.id-name > h6, .roles >h6, .funfacts > h6 {
+  font-size: 17px;
+}
+.tooltiptext{
+margin:0px;
+padding:0px;
+font-size:9px;
+left:450%;
+width:600%;
+min-height: 30px;
+top: 5%;
+
+}
+
+.tooltip {
+  width: 30px;
+  height: 30px;
+}
+.quote{
+  font-size:14px;
+}
+}
 
