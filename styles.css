@@ -487,8 +487,12 @@ footer{
     flex-direction: column;
 
   }
+  .poster:hover{
+    display: none;
+  }
   
 }
+
 
 /* ------------------------------------------------------------------- */
 
