@@ -313,3 +313,7 @@ function navFunction() {
       x.className = "topnav";
     }
   }
+  function navFunction() {
+    const x = document.getElementById("myTopnav");
+    x.classList.toggle("responsive");
+  }
