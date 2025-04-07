@@ -446,6 +446,7 @@ footer{
   }
   .footer-middle{
     order: 1;
+    margin-bottom: 10px;
   }
   .footer-aboutus{
     margin-top: 20px;
