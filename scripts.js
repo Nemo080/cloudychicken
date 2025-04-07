@@ -286,22 +286,6 @@ function updateFunFactsText() {
     }
 }
 
-// Run on page load and window resize
-window.addEventListener('load', updateFunFactsText);
-window.addEventListener('resize', updateFunFactsText);
-// MOBILE ID CARDS
-
-// Get all cards
-const cards = document.querySelectorAll(".accordion");
-
-cards.forEach(function(card) {
-  card.addEventListener("click", function() {
-    const panel = this.querySelector(".panel");
-    panel.classList.toggle("show");
-  });
-});
-
-
 
 // TOGGLING ARROW BUTTONS
 // Code for responsive navbar 
