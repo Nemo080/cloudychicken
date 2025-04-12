@@ -1985,3 +1985,7 @@ font-size: 10px;
 .character-img{
   width: 500px;
 }
+.bg-img{
+  width: 500px;
+  /* height: 350px; */
+}
