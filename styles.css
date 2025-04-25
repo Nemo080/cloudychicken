@@ -179,11 +179,13 @@ video {
   position: relative;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh; /* Video fills the entire viewport height (hero section) */
+  width: 90%;
+  height: 680px;
   object-fit: cover; /* Ensures the video covers the screen without distortion */
   z-index: -1; 
+  border-radius: 30px;
 }
+
 /* Hero section styles end here */
 
 /* ------------------------------------------------------------------- */
@@ -628,6 +630,7 @@ font-weight: 500;
   line-height: 1.4; /* Improves readability */
   word-wrap: break-word;
   overflow-wrap: break-word; /* Ensures text doesn't overflow */
+  font-weight: 300;
 }
 
 /* Navigation Buttons */
@@ -979,6 +982,7 @@ border: 3px solid #8E6641;
 
 .quote{
   grid-column: 2 / span 2;
+  font-weight: 300;
 }
 
 /* .group-three, .main-divider,.group-one{
@@ -2052,4 +2056,32 @@ font-size: 10px;
 .bg-img{
   width: 500px;
   /* height: 350px; */
+}
+.synopsis{
+  background-color: #FFE9C1;
+  width: 80rem;
+  align-items: center;
+  margin-top: 2rem;
+  border: solid #8E6641;
+  border-width: 5px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.synopsis-title{
+  font-size: 34px;
+  font-weight: 600;
+}
+.synopsis-text{
+  font-size: 24px;
+  font-weight: 300;
+  width: 76rem;
+  text-align: left;
+  margin-bottom: 4rem;
+  margin-top: 0px;
+}
+.evening-content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
