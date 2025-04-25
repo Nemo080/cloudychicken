@@ -1296,6 +1296,70 @@ footer img{
   display:none !important;
 }
 
+/* EVENING'S END CONTENT STARTS HERE ---------------------------------------------------------------------------*/
+
+.textcard{
+  background-color:#FFE9C1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 0;
+
+
+}
+
+.character-intro{
+  background-color: transparent; 
+  display: flex;
+  flex-direction: column;
+ width: 100%;   
+ min-width: 100%; 
+  box-sizing: border-box;
+  text-align: left;
+  padding: 20px;
+  height: auto;
+  align-items: center;
+  position: relative;
+  gap: 20px;
+  z-index: 1;
+  flex: 0 0 100%;
+
+}
+
+.character-container{
+  width: 100%;
+  max-width: 749px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+ margin: 0 auto;
+}
+
+.char-carousel{
+  gap:166px;
+  display: flex;
+  /* flex-direction: row; */
+  transition: transform 0.5s ease-in-out;
+  /* width: max-content; Allows it to expand to fit all child cards */
+  width:100%;
+}
+
+.prev-end{
+left:17%;
+top:181%;
+}
+
+
+.next-end{
+right:17%;
+top:181%;
+}
+
+/* EVENING'S END CONTENT ENDS HERE ----------------------------------------------------------------------------------------- */
+
 /* Adjust for Smaller Screens */
 @media (max-width:1425px){
   .prev{

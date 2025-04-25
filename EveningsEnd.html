@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="icon" type="image/x-icon" href="HomepageAssets/favicon.PNG" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://kit.fontawesome.com/bbec992219.js" crossorigin="anonymous"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
@@ -20,8 +21,7 @@
         ><img
           class="Logo"
           src="NavbarAssets/CloudyChickenLogo.png"
-          alt="CloudyChickenLogo"
-      /></a>
+          alt="CloudyChickenLogo"/></a>
       <nav>
         <ul>
           <li><a href="index.html" class="NavItems">Home</a></li>
@@ -66,24 +66,69 @@
         name hasn’t been decided yet.
       </p>
     </div>
-    <div></div>
-    <div>
+    
+    
+
+ 
       <h2>Characters</h2>
       <!-- Insert imgs of each characters -->
-      <div>
-        <img class="character-img" src="EveningAssets/Rin.png"/>
-        <h3>Rin</h3>
-        <p> Rin comes from an admirable samurai/knight clan. She is gifted at wielding a sword and throwing knives.</p>
-        <img class="character-img" src="EveningAssets/Kento.png"/>
-        <h3>Kento</h3>
-        <p>Kento is a young boy with the ability to transform into a wolf. He is timid at first encounter but slowly grows comfortable. He is an expert thief and is known for his infamous bread heist.</p>
-        <img class="character-img" src="EveningAssets/Erabu.png"/>
-        <h3>Erabu</h3>
-        <p>Erabu is a young girl with snake ancestry that allows her to transform into a snake. However, the transformation causes her to shift personalities and become an alternate version of herself where her typical self is kind and quiet becomes angry and mean. She tends to be the sweet angel to the squad and everyone adores her when she is her typical self.</p>
-        <img class="character-img" src="EveningAssets/Velenia.png"/>
-        <h3>Velenia</h3>
-        <p>Velenia is the princess of the royal family. She was born with the ability to manipulate elemental magic. Due to the endless boredom and politics that her family was involved in, she decides she needs fresh air and leaves the palace to practice her magic in the real world. She is the life of the squad or even a party if there was ever one. </p>
+       
+      <div class="character-container"><!-- The .carousel-container holds the carousel itself. -->
+    
+        <div class="char-carousel"> <!-- Each .card represents a slide in the carousel. -->
+
+          <div class="character-intro">
+  
+            <img class="character-img" src="EveningAssets/Rin.png"/>
+            <div class="textcard">
+            <h3>Rin</h3>
+            <p> Rin comes from an admirable samurai/knight clan. She is gifted at wielding a sword and throwing knives.</p>
+            </div>
+         </div>
+
+
+          <div  class="character-intro">
+            <img class="character-img" src="EveningAssets/Kento.png"/>
+            <div class="textcard">
+            <h3>Kento</h3>
+            <p>Kento is a young boy with the ability to transform into a wolf. He is timid at first encounter but slowly grows comfortable. He is an expert thief and is known for his infamous bread heist.</p>
+            </div>
+          </div>
+
+          <div class="character-intro">
+            <img class="character-img" src="EveningAssets/Erabu.png"/>
+            <div class="textcard">
+            <h3>Erabu</h3>
+            <p>Erabu is a young girl with snake ancestry that allows her to transform into a snake. However, the transformation causes her to shift personalities and become an alternate version of herself where her typical self is kind and quiet becomes angry and mean. She tends to be the sweet angel to the squad and everyone adores her when she is her typical self.</p>
+            </div>
+          </div>
+
+          <div class="character-intro">
+            <img class="character-img" src="EveningAssets/Velenia.png"/>
+            <div class="textcard">
+            <h3>Velenia</h3>
+            <p>Velenia is the princess of the royal family. She was born with the ability to manipulate elemental magic. Due to the endless boredom and politics that her family was involved in, she decides she needs fresh air and leaves the palace to practice her magic in the real world. She is the life of the squad or even a party if there was ever one. </p>
+            </div>  
+          </div> 
+        </div>
+      </div>    
+  
+  
+
+    <div>
+            <i class="fa-solid fa-caret-left button prev prev-end "></i>
+            <i class="fa-solid fa-caret-right button next next-end "></i>
+    </div>
+
+         <!-- Section Indicators -->
+         <div class="indicator-container">
+          <span class="indicator active"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
       </div>
+
+
       <h2>Backgrounds</h2>
       <!-- Insert imgs of background -->
       <h3>The Great Tree</h3>
@@ -148,6 +193,7 @@
           </div>
         </footer>
       </section>
-    </div>
+      </div>
+    </div>  
   </body>
 </html>
