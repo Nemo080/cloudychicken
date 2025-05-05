@@ -300,86 +300,108 @@ function navFunction() {
   function navFunction() {
     const x = document.getElementById("myTopnav");
     x.classList.toggle("responsive");
-  }
+}
 
 
 
 //   EVENING'S END PAGE SCRIPT STARTS HERE -------------------------------------------
 
-document.addEventListener("DOMContentLoaded", function () {
-    const charCarousel = document.querySelector(".char-carousel");
-    const charCards = document.querySelectorAll(".character-intro");
-    const charPrevBtn = document.querySelector(".prev-end");
-    const charNextBtn = document.querySelector(".next-end");
-    const charIndicators = document.querySelectorAll(".indicator");
 
-    let charCurrentIndex = 1; // Start at index 1 to skip the cloned first item
-    const charTotalCards = charCards.length;
+// document.addEventListener("DOMContentLoaded", function () {
+//     const charCarousel = document.querySelector(".char-carousel");
+//     const charCards = document.querySelectorAll(".character-intro");
+//     const charPrevBtn = document.querySelector(".prev-end");
+//     const charNextBtn = document.querySelector(".next-end");
+//     const charIndicators = document.querySelectorAll(".indicator");
 
-    // Clone first and last cards
-    const charFirstClone = charCards[0].cloneNode(true);
-    const charLastClone = charCards[charTotalCards - 1].cloneNode(true);
+//     let charCurrentIndex = 1; // Start at index 1 to skip the cloned first item
+//     const charTotalCards = charCards.length;
 
-    // Add cloned items to the carousel
-    charCarousel.insertBefore(charLastClone, charCards[0]);
-    charCarousel.appendChild(charFirstClone);
+//     // Clone first and last cards
+//     const charFirstClone = charCards[0].cloneNode(true);
+//     const charLastClone = charCards[charTotalCards - 1].cloneNode(true);
 
-    const charUpdatedCards = document.querySelectorAll(".character-intro");
-    const charTotalSlides = charUpdatedCards.length;
+//     // Add cloned items to the carousel
+//     charCarousel.insertBefore(charLastClone, charCards[0]);
+//     charCarousel.appendChild(charFirstClone);
 
-    // Set the initial position to the first actual slide
-    charCarousel.style.transform = `translateX(-${charCurrentIndex * 100}%)`;
+//     const charUpdatedCards = document.querySelectorAll(".character-intro");
+//     const charTotalSlides = charUpdatedCards.length;
 
-    function updateCharCarousel() {
-        charCarousel.style.transition = "transform 0.5s ease-in-out";
-        charCarousel.style.transform = `translateX(-${charCurrentIndex * 100}%)`;
+//     // Set the initial position to the first actual slide
+//     charCarousel.style.transform = `translateX(-${charCurrentIndex * 100}%)`;
 
-        // Reset transition when looping
-        if (charCurrentIndex === 0) {
-            setTimeout(() => {
-                charCarousel.style.transition = "none";
-                charCurrentIndex = charTotalCards;
-                charCarousel.style.transform = `translateX(-${charCurrentIndex * 100}%)`;
-            }, 500);
-        }
+//     function updateCharCarousel() {
+//         charCarousel.style.transition = "transform 0.5s ease-in-out";
+//         charCarousel.style.transform = `translateX(-${charCurrentIndex * 100}%)`;
 
-        if (charCurrentIndex === charTotalSlides - 1) {
-            setTimeout(() => {
-                charCarousel.style.transition = "none";
-                charCurrentIndex = 1;
-                charCarousel.style.transform = `translateX(-${charCurrentIndex * 100}%)`;
-            }, 500);
-        }
+//         // Reset transition when looping
+//         if (charCurrentIndex === 0) {
+//             setTimeout(() => {
+//                 charCarousel.style.transition = "none";
+//                 charCurrentIndex = charTotalCards;
+//                 charCarousel.style.transform = `translateX(-${charCurrentIndex * 100}%)`;
+//             }, 500);
+//         }
 
-        // Update active indicator
-        charIndicators.forEach((dot, index) => {
-            dot.classList.toggle("active", index === (charCurrentIndex - 1) % charTotalCards);
-        });
-    }
+//         if (charCurrentIndex === charTotalSlides - 1) {
+//             setTimeout(() => {
+//                 charCarousel.style.transition = "none";
+//                 charCurrentIndex = 1;
+//                 charCarousel.style.transform = `translateX(-${charCurrentIndex * 100}%)`;
+//             }, 500);
+//         }
 
-    charNextBtn.addEventListener("click", function () {
-        if (charCurrentIndex >= charTotalSlides - 1) return;
-        charCurrentIndex++;
-        updateCharCarousel();
-    });
+//         // Update active indicator
+//         charIndicators.forEach((dot, index) => {
+//             dot.classList.toggle("active", index === (charCurrentIndex - 1) % charTotalCards);
+//         });
+//     }
 
-    charPrevBtn.addEventListener("click", function () {
-        if (charCurrentIndex <= 0) return;
-        charCurrentIndex--;
-        updateCharCarousel();
-    });
+//     charNextBtn.addEventListener("click", function () {
+//         if (charCurrentIndex >= charTotalSlides - 1) return;
+//         charCurrentIndex++;
+//         updateCharCarousel();
+//     });
 
-    // Add functionality for indicators
-    charIndicators.forEach((dot, index) => {
-        dot.addEventListener("click", function () {
-            charCurrentIndex = index + 1; // Offset because of the clone
-            updateCharCarousel();
-        });
-    });
+//     charPrevBtn.addEventListener("click", function () {
+//         if (charCurrentIndex <= 0) return;
+//         charCurrentIndex--;
+//         updateCharCarousel();
+//     });
 
-    // Initialize the carousel position
-    updateCharCarousel();
-});
+//     // Add functionality for indicators
+//     charIndicators.forEach((dot, index) => {
+//         dot.addEventListener("click", function () {
+//             charCurrentIndex = index + 1; // Offset because of the clone
+//             updateCharCarousel();
+//         });
+//     });
+
+//     // Initialize the carousel position
+//     updateCharCarousel();
+// });   
+// document.addEventListener('DOMContentLoaded', () => {
+//     console.log("DOM is ready!");
+//     const slider = document.querySelector('.slider');
+//     const leftArrow = document.querySelector('.left');
+//     const rightArrow = document.querySelector('.right');
+//     const slides = document.querySelectorAll('.character-intro');
     
-  
+//     let sectionIndex = 0;
+    
+//     rightArrow.addEventListener('click', function () {
+//       if (sectionIndex < slides.length - 1) {
+//         sectionIndex++;
+//         slider.style.transform = `translateX(-${sectionIndex * 100}%)`;      }
+//     });
+    
+//     leftArrow.addEventListener('click', function () {
+//       if (sectionIndex > 0) {
+//         sectionIndex--;
+//         slider.style.transform = `translateX(-${sectionIndex * 100}%)`;
+//       }
+//     });
+//     console.log("Script is running!");
+//   });
 // EVENING'S END PAGE SCRIPT ENDS HERE -----------------------------------------------
