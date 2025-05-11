@@ -229,3 +229,28 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initialize the carousel position
     updateCharCarousel();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.querySelector('.modal');
+    const previews = document.querySelectorAll (".character-img, .evening-img, .tall-img");
+    const original = document.querySelector(".full-img");
+    // const imgText = document.querySelector(".caption");
+
+
+    previews.forEach(preview =>{
+        preview.addEventListener('click', () =>{
+            modal.classList.add('open');
+            original.classList.add('open');
+            //Dynamic change text and image
+            const originalSrc = preview.getAttribute('data-original');
+            original.src = `EveningAssets/${originalSrc}`;
+        })
+    })
+
+    modal.addEventListener('click', (e) =>{
+        if(e.target.classList.contains('modal')){
+            modal.classList.remove('open');
+            original.classList.remove('open');
+        }
+    })
+});

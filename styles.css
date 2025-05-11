@@ -1391,6 +1391,51 @@ top:320%;
  right:17%;
   top:400%;
 }
+
+.prev-char, .next-char {
+    position: absolute;
+    z-index: 99; /* Make sure this is lower than the modal */
+}
+
+.modal{
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transition: 0.25s ease-out;
+  z-index: 100; /* Higher than arrows so it covers them */
+}
+.modal.open{
+opacity: 1;
+pointer-events: all;
+}
+.modal p {
+  color: white;
+  font-size: 2rem;
+  position:absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+}
+.full-img{
+  position: absolute;
+  height: 75%;
+  top:50%;
+  left: 50%;
+  transform: translate( 50%, 50%) scale(0.5);
+  transition: all 0.25s ease-out;
+  /* margin-top: 5rem; */
+}
+
+.full-img.open{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
 /* -------------------------------------------------- */
 /* Evening's End Hero Section */
 .EE-Title{
@@ -1403,14 +1448,24 @@ top:320%;
   height: 500px;
   margin-top:20px;
   border-radius: 30px;
+  object-fit: cover;
 }
 .character-img{
   width: 500px;
+  cursor: pointer;
 }
-.bg-img{
+.evening-img{
   width: 500px;
   height: 350px;
+  cursor: pointer;
 }
+.tall-img{
+  width: 500px;
+  height: 350px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
 .synopsis{
   background-color: #FFE9C1;
   width: 80rem;
@@ -1439,6 +1494,7 @@ top:320%;
   align-items: center;
   flex-direction: column;
 }
+
 
 /* EVENING'S END CONTENT ENDS HERE ----------------------------------------------------------------------------------------- */
 
