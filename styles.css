@@ -1209,6 +1209,9 @@ gap:87px;
   overflow:hidden;
   word-wrap: break-word;
   white-space: normal; /* Prevents text from wrapping */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
   /* Arrow pointing UP */
