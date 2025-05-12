@@ -668,7 +668,9 @@ font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
 }
 
 .indicator, .indicator-back, .indicator-story {
@@ -1303,11 +1305,12 @@ footer img{
 /* EVENING'S END CONTENT STARTS HERE ---------------------------------------------------------------------------*/
 
 .end-title{
-  border: 3px solid #8E6641;
+  border: 5px solid #8E6641;
   background-color: #FFE9C1;
-  border-radius: 5px;
+  border-radius: 10px;
   margin:8px;
   padding:15px;
+  font-size: 30px;
 }
 
 .textcard{
@@ -1317,8 +1320,18 @@ footer img{
   text-align: center;
   row-gap: 0;
   border-radius: 15px;
+  flex:1;
+  padding-left: 25px;
+  padding-right: 25px;
+  /* padding-bottom: 20px; */
+}
+.textcard h3{
+  font-size: 24px;
+}
 
-
+.textcard p {
+  font-size: 20px;
+  font-weight: 300;
 }
 
 .character-intro, .background-intro, .story-intro{
@@ -1337,12 +1350,12 @@ footer img{
   z-index: 1;
   flex: 0 0 100%;
   padding-bottom: 0px;
-
+  justify-content: center;
 }
 
 .character-container, .background-container, .story-container{
   width: 100%;
-  max-width: 749px;
+  max-width: 850px;
   position: relative;
   display: flex;
   overflow: hidden;
@@ -1350,6 +1363,8 @@ footer img{
   align-content: center;
   justify-content: center;
   margin: 0 auto;
+  /* max-width: 1200px; */
+  /* min-height: 500px; */
 }
 
 .char-carousel, .back-carousel, .story-carousel{
@@ -1361,7 +1376,25 @@ footer img{
   width:100%;
 }
 
-.prev-char{
+.prev-char, .next-char {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 99;
+  font-size: 4rem;
+  /* padding: 10px; */
+}
+
+.prev-char {
+  left: -40px;
+}
+
+.next-char {
+  right: -40px;
+}
+
+/* .prev-char{
 left:17%;
 top:220%;
 }
@@ -1370,9 +1403,27 @@ top:220%;
 .next-char{
 right:17%;
 top:220%;
+} */
+
+.prev-back, .next-back {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 99;
+  font-size: 4rem;
 }
 
-.prev-back{
+.prev-back {
+  left: -40px;
+}
+
+.next-back {
+  right: -40px;
+}
+
+/* .prev-back{
 left:17%;
 top:320%;
 }
@@ -1380,9 +1431,28 @@ top:320%;
 .next-back{
 right:17%;
 top:320%;
+} */
+
+.prev-story, .next-story {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 99;
+  font-size: 4rem;
 }
 
-.prev-story{
+.prev-story {
+  left: -40px;
+}
+
+.next-story {
+  right: -40px;
+}
+
+
+/* .prev-story{
   left:17%;
   top:400%;
 }
@@ -1390,12 +1460,7 @@ top:320%;
 .next-story{
  right:17%;
   top:400%;
-}
-
-.prev-char, .next-char {
-    position: absolute;
-    z-index: 99; /* Make sure this is lower than the modal */
-}
+} */
 
 .modal{
   background: rgba(0, 0, 0, 0.6);
@@ -1435,6 +1500,14 @@ pointer-events: all;
   transform: translate(-50%, -50%) scale(1);
 }
 
+.divider{
+  background-color: #8E6641;
+  height: 10px;
+  width: 55%;
+  border-radius: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 
 /* -------------------------------------------------- */
 /* Evening's End Hero Section */
@@ -1451,16 +1524,16 @@ pointer-events: all;
   object-fit: cover;
 }
 .character-img{
-  width: 500px;
+  width: 650px;
   cursor: pointer;
 }
 .evening-img{
-  width: 500px;
+  width: 650px;
   height: 350px;
   cursor: pointer;
 }
 .tall-img{
-  width: 500px;
+  width: 650px;
   height: 350px;
   object-fit: cover;
   cursor: pointer;
@@ -2167,4 +2240,79 @@ font-size: 10px;
 }
 
 
+}
+
+
+/* Responsive adjustments for arrows on the evening ends page */
+@media (min-width: 1024px) {
+    .prev-char, .next-char {
+        display: block !important;
+    }
+    .prev-back, .next-back {
+    display: block !important;
+    }
+    .prev-story, .next-story {
+    display: block !important;
+    }
+}
+
+@media (min-width: 960px) {
+    .prev-char, .next-char {
+        display: block; /* Ensures they remain visible */
+    }
+    .prev-back, .next-back {
+    display: block; /* Ensures they remain visible */
+    }
+    .prev-story, .next-story {
+    display: block; /* Ensures they remain visible */
+    }
+}
+
+@media (max-width: 768px) {
+    .prev-char {
+        left: -30px;
+    }
+
+    .next-char {
+        right: -30px;
+    }
+    .prev-back {
+    left: -30px;
+    }
+
+    .next-back {
+        right: -30px;
+    }
+    .prev-story {
+    left: -30px;
+    }
+
+    .next-story {
+        right: -30px;
+    }
+}
+
+@media (min-width: 960px) {
+    .prev-char {
+        left: 10px; /* Make sure it's visible */
+    }
+
+    .next-char {
+        right: 10px;
+    }
+
+    .prev-back {
+    left: 10px; /* Make sure it's visible */
+    }
+
+    .next-back {
+        right: 10px;
+    }
+    .prev-story {
+    left: 10px; /* Make sure it's visible */
+    }
+
+    .next-story {
+        right: 10px;
+    }
 }
