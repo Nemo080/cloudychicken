@@ -651,12 +651,12 @@ font-weight: 500;
 
 /* Previous (Left Facing) Button */
 .prev{
-  left: 5%; /* Position left for previous button */
+  left: 4%; /* Position left for previous button */
  }
 
 /* Next (Right Facing) Button */
 .next{
-  right: 5%;
+  right: 4%;
 }
 
 .button:hover {
