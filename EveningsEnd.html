@@ -1,31 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="scripts" href="scripts.js">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" type="image/x-icon" href="HomepageAssets/favicon.PNG">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="scripts" href="scripts.js" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" type="image/x-icon" href="HomepageAssets/favicon.PNG" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://kit.fontawesome.com/bbec992219.js" crossorigin="anonymous"></script>
+    <!-- <link rel="scripts" href="evening.js" />  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Evening's End</title>
-</head>
-<body>
-    <header class=" topnav Navbar" id="myTopnav">
-        <a href="index.html"><img class="Logo" src="NavbarAssets/CloudyChickenLogo.png" alt="CloudyChickenLogo"/></a>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="NavItems">Home</a></li>
-                <li class="dropdown"><p class="NavItems">Works</p>
-                    <ul class="submenu">
-                        <li><a href="EveningsEnd.html">Evening's End</a></li>
-                    </ul>
-                </li>
-                <li><a href="about.html" class="NavItems">About Us</a></li>    
+  </head>
+  <body>
+    <header class="topnav Navbar" id="myTopnav">
+      <a href="index.html"
+        ><img
+          class="Logo"
+          src="NavbarAssets/CloudyChickenLogo.png"
+          alt="CloudyChickenLogo"/></a>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="NavItems">Home</a></li>
+          <li class="dropdown">
+            <p class="NavItems">Works</p>
+            <ul class="submenu">
+              <li><a href="EveningsEnd.html">Evening's End</a></li>
             </ul>
-        </nav>
+          </li>
+          <li><a href="about.html" class="NavItems">About Us</a></li>
+        </ul>
+      </nav>
     </header>
+    <h1 class="EE-Title">EVENING'S END</h1>
+    <video playsinline autoplay loop  muted class="EE-Video" src="HomepageAssets/HeroVideo.mp4" type="video/mp4" ></video>
+    <section class="evening-content">
+      <div class="synopsis">
+        <h2 class="synopsis-title">SYNOPSIS</h2>
+        <p class="synopsis-text">
+          Evening’s End follows a group of Thieves* on a picnic that ends in an
+          unexpected disaster. This squad of Thieves consists of four individuals,
+          Kento, Rin, Erabu and Velenia, who have grown to call each other family
+          through the obstacles that brought them together. They finally get a
+          breather and plan a quiet, small and wholesome picnic to spend some time
+          together. However, fate has other plans for them and disaster strikes in
+          their moment of peace and quiet. 
+          <br>
+          <br>
+          After a round of archery, Erabu goes to
+          collect the arrows and is faced with a poisoned snake that goes mad and
+          bites her. The poison seeps into Erabu, alters her DNA and triggers her
+          to transform into a large snake and lose her sanity. This accident
+          creates a shift in the squad and they scramble to help Erabu come back
+          to herself and in the process things don’t go as they intended for it to
+          go. As the saying goes, disaster strikes when you least expect it. Will
+          this immobilize the Thieves? Will Erabu survive the evening? Will this
+          be the end for them? *Thieves is a placeholder squad name. The squad
+          name hasn’t been decided yet.
+        </p>
+      </div>
+    
+      <span class="divider"></span>
+    
+      <h2 class="end-title">Characters</h2>
+      <!-- Insert imgs of each characters -->
+      <div class="character-container"><!-- The .carousel-container holds the carousel itself. -->
+        <i class="fa-solid fa-caret-left button prev prev-char "></i>
+        <div class="char-carousel"> <!-- Each .card represents a slide in the carousel. -->
+  
+          <div class="character-intro">
+  
+            <img class="character-img" src="EveningAssets/Rin.png" alt="Rin" data-original="Rin.png"/>
+            <div class="textcard">
+              <h3>Rin</h3>
+              <p> Rin comes from an admirable samurai/knight clan. She is gifted at wielding a sword and throwing knives.
+              </p>
+            </div>
+          </div>
+  
+  
+          <div class="character-intro">
+            <img class="character-img" src="EveningAssets/Kento.png" alt="Kento" data-original="Kento.png"/>
+            <div class="textcard">
+              <h3>Kento</h3>
+              <p>Kento is a young boy with the ability to transform into a wolf. He is timid at first encounter but slowly
+                grows comfortable. He is an expert thief and is known for his infamous bread heist.</p>
+            </div>
+          </div>
+  
+          <div class="character-intro">
+            <img class="character-img" src="EveningAssets/Erabu.png" alt="Erabu" data-original="Erabu.png" />
+            <div class="textcard">
+              <h3>Erabu</h3>
+              <p>Erabu is a young girl with snake ancestry that allows her to transform into a snake. However, the
+                transformation causes her to shift personalities and become an alternate version of herself where her
+                typical self is kind and quiet becomes angry and mean. She tends to be the sweet angel to the squad and
+                everyone adores her when she is her typical self.</p>
+            </div>
+          </div>
+  
+          <div class="character-intro">
+            <img class="character-img" src="EveningAssets/Velenia.png" alt="Velania" data-original="Velenia.png"/>
+            <div class="textcard">
+              <h3>Velenia</h3>
+              <p>Velenia is the princess of the royal family. She was born with the ability to manipulate elemental magic.
+                Due to the endless boredom and politics that her family was involved in, she decides she needs fresh air
+                and leaves the palace to practice her magic in the real world. She is the life of the squad or even a
+                party if there was ever one. </p>
+            </div>
+          </div>
+        </div>
+        <i class="fa-solid fa-caret-right button next next-char "></i>
+      </div>
+  
+  
+  
+      <!-- <div>
+        <i class="fa-solid fa-caret-left button prev prev-char "></i>
+        <i class="fa-solid fa-caret-right button next next-char "></i>
+      </div> -->
+  
+      <!-- Section Indicators -->
+      <div class="indicator-container">
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+      </div>
+
+      <span class="divider-between"></span>
+
+      <h2 class="end-title">Backgrounds</h2>
+      <!-- Insert imgs of background -->
+      <div class="background-container"><!-- The .carousel-container holds the carousel itself. -->
+        <i class="fa-solid fa-caret-left button prev prev-back "></i>
+        <div class="back-carousel"> <!-- Each .card represents a slide in the carousel. -->
+          <div class="background-intro">
+            <img class="evening-img" src="EveningAssets/cc_bg1.jpg" alt="great-Tree" data-original="cc_bg1.jpg" />
+            <div class="textcard">
+              <h3>The Great Tree</h3>
+            </div>
+          </div>
+          <div class="background-intro">
+            <img class="tall-img" src="EveningAssets/cc_bg2.jpg" alt="camp-fire" data-original="cc_bg2.jpg" />
+            <div class="textcard">
+              <h3>The Camp Fire</h3>
+            </div>
+          </div>
+          <div class="background-intro">
+            <img class="tall-img" src="EveningAssets/cc_bg3.jpg" alt="town-alley" data-original="cc_bg3.jpg" />
+            <div class="textcard">
+              <h3>The Town Alley</h3>
+            </div>
+          </div>
+          <div class="background-intro">
+            <img class="evening-img" src="EveningAssets/cc_bg4.jpg" alt="art-style" data-original="cc_bg4.jpg" />
+            <div class="textcard">
+              <h3>Art Style Inspo</h3>
+            </div>
+          </div>
+        </div>
+        <i class="fa-solid fa-caret-right button next next-back "></i>
+      </div>
+     
+      <!-- <div>
+        <i class="fa-solid fa-caret-left button prev prev-back "></i>
+        <i class="fa-solid fa-caret-right button next next-back "></i>
+      </div> -->
+  
+      <!-- Section Indicators -->
+      <div class="indicator-container">
+        <span class="indicator-back active"></span>
+        <span class="indicator-back"></span>
+        <span class="indicator-back"></span>
+        <span class="indicator-back"></span>
+      </div>
+  
+      <span class="divider-between"></span>
+      <h2 class="end-title">Storyboard</h2>
+      <!-- Insert imgs of Storyboard -->
+      <div class="story-container"><!-- The .carousel-container holds the carousel itself. -->
+        <i class="fa-solid fa-caret-left button prev prev-story "></i>
+          <div class="story-carousel"> <!-- Each .card represents a slide in the carousel. -->
+    
+            <div class="story-intro">
+              <img class="evening-img" src="EveningAssets/sb1.png" alt="story-board-pg1" data-original="sb1.png" />
+              <div class="textcard">
+                <h3>The beginning of the End</h3>
+              </div>
+            </div>
+            <div class="story-intro">
+              <img class="evening-img" src="EveningAssets/sb2.png" alt="bread" data-original="sb2.png" />
+              <div class="textcard">
+                <h3>Breaddddd!!</h3>
+              </div>
+            </div>
+          </div>
+        <i class="fa-solid fa-caret-right button next next-story "></i>
+      </div>
+  
+      <!-- <div>
+        <i class="fa-solid fa-caret-left button prev prev-story "></i>
+        <i class="fa-solid fa-caret-right button next next-story "></i>
+      </div> -->
+  
+      <!-- Section Indicators -->
+      <div class="indicator-container">
+        <span class="indicator-story active"></span>
+        <span class="indicator-story"></span>
+        <!-- <span class="indicator-story"></span>
+        <span class="indicator-story"></span> -->
+      </div>
+
+      <div class="modal">
+        <img src="EveningAssets/Rin.png" alt="" class="full-img" />
+        <!-- <p class="caption"></p> -->
+        <img src="EveningAssets/cc_bg1.jpg" alt="" class="full-img" /> 
+      </div>
+  
+    </section>
+
+    <!-- footer -->
     <div class="footer-gradient">
       <section>
         <span class="footer-border-left"></span>
@@ -33,26 +234,46 @@
         <footer>
           <div class="footer-content">
             <div class="footer-copy">
-            <a href="index.html"><img class="Logo-footer" src="NavbarAssets/CloudyChickenLogo.png" alt="CloudyChickenLogo" /></a>
-            <p class="copyright">&copy;
-              <script>document.write(new Date().getFullYear())</script> CloudyChicken
-            </p>
-          </div>
+              <a href="index.html"
+                ><img
+                  class="Logo-footer"
+                  src="NavbarAssets/CloudyChickenLogo.png"
+                  alt="CloudyChickenLogo"
+              /></a>
+              <p class="copyright">
+                &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                CloudyChicken
+              </p>
+            </div>
             <div class="footer-middle">
               <div class="footer-aboutus">
-              <a href="about.html" >About Us</a></div>
+                <a href="about.html">About Us</a>
+              </div>
               <div class="footer-middle-p">
-              <p>Get in Touch: <br> CloudyChicken.studio@gmail.com</p></div>
+                <p>
+                  Get in Touch: <br />
+                  CloudyChicken.studio@gmail.com
+                </p>
+              </div>
             </div>
             <div class="social-media">
               <p>Follow Us</p>
-              <a href=""><img class="social"src="FooterAssets/instagram.png"/></a>
+              <a href=""
+                ><img class="social" src="FooterAssets/instagram.png"
+              /></a>
               <!-- <a href=""><img class="social"src="FooterAssets/email.png"/></a> -->
-              <a href=""><img class="social"src="FooterAssets/youtube.png"/></a>
+              <a href=""
+                ><img class="social" src="FooterAssets/youtube.png"
+              /></a>
             </div>
           </div>
         </footer>
       </section>
-    </div>
-</body>
+      </div>
+    </div> 
+    <script src="evening.js" ></script>
+  </body>
 </html>

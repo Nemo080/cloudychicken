@@ -179,11 +179,13 @@ video {
   position: relative;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh; /* Video fills the entire viewport height (hero section) */
+  width: 90%;
+  height: 680px;
   object-fit: cover; /* Ensures the video covers the screen without distortion */
   z-index: -1; 
+  border-radius: 30px;
 }
+
 /* Hero section styles end here */
 
 /* ------------------------------------------------------------------- */
@@ -285,7 +287,7 @@ video {
   background-image: linear-gradient(#FAD89A, #FFE9C1);
   display: flex;
 }
-section{
+.footer-gradient > section{
   margin-top: 3rem;
   width: 100%;
 }
@@ -628,6 +630,7 @@ font-weight: 500;
   line-height: 1.4; /* Improves readability */
   word-wrap: break-word;
   overflow-wrap: break-word; /* Ensures text doesn't overflow */
+  font-weight: 300;
 }
 
 /* Navigation Buttons */
@@ -648,12 +651,12 @@ font-weight: 500;
 
 /* Previous (Left Facing) Button */
 .prev{
-  left: 5%; /* Position left for previous button */
+  left: 4%; /* Position left for previous button */
  }
 
 /* Next (Right Facing) Button */
 .next{
-  right: 5%;
+  right: 4%;
 }
 
 .button:hover {
@@ -665,10 +668,12 @@ font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
 }
 
-.indicator {
+.indicator, .indicator-back, .indicator-story {
   width: 12px;
   height: 12px;
   margin: 5px;
@@ -679,7 +684,7 @@ font-weight: 500;
   transition: background-color 0.3s ease-in-out;
 }
 
-.indicator.active {
+.indicator.active, .indicator-back.active, .indicator-story.active {
   background-color: #FFFFFF;
 }
 
@@ -979,6 +984,7 @@ border: 3px solid #8E6641;
 
 .quote{
   grid-column: 2 / span 2;
+  font-weight: 300;
 }
 
 /* .group-three, .main-divider,.group-one{
@@ -1295,6 +1301,309 @@ footer img{
 .fa-caret-down{
   display:none !important;
 }
+
+/* EVENING'S END CONTENT STARTS HERE ---------------------------------------------------------------------------*/
+
+.end-title{
+  border: 5px solid #8E6641;
+  background-color: #FFE9C1;
+  border-radius: 10px;
+  margin:8px;
+  padding:15px;
+  font-size: 30px;
+}
+
+.textcard{
+  background-color:#FFE9C1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 0;
+  border-radius: 15px;
+  flex:1;
+  padding-left: 25px;
+  padding-right: 25px;
+  align-items: center;
+  /* padding-bottom: 20px; */
+}
+.textcard h3{
+  font-size: 24px;
+}
+
+.textcard p {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 0px;
+}
+
+.character-intro, .background-intro, .story-intro{
+  background-color: transparent; 
+  display: flex;
+  flex-direction: column;
+  width: 100%;   
+  min-width: 100%; 
+  box-sizing: border-box;
+  text-align: left;
+  padding: 20px;
+  height: auto;
+  align-items: center;
+  position: relative;
+  gap: 20px;
+  z-index: 1;
+  flex: 0 0 100%;
+  padding-bottom: 0px;
+  justify-content: center;
+}
+
+.character-container, .background-container, .story-container{
+  width: 100%;
+  max-width: 850px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto;
+  /* max-width: 1200px; */
+  /* min-height: 500px; */
+}
+
+.char-carousel, .back-carousel, .story-carousel{
+  /* gap:166px; removed because character-intro isn't centered*/
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.5s ease-in-out;
+  width: max-content; 
+  width:100%;
+}
+
+.prev-char, .next-char {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 99;
+  font-size: 4rem;
+  /* padding: 10px; */
+}
+
+.prev-char {
+  left: -40px;
+}
+
+.next-char {
+  right: -40px;
+}
+
+/* .prev-char{
+left:17%;
+top:220%;
+}
+
+
+.next-char{
+right:17%;
+top:220%;
+} */
+
+.prev-back, .next-back {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 99;
+  font-size: 4rem;
+}
+
+.prev-back {
+  left: -40px;
+}
+
+.next-back {
+  right: -40px;
+}
+
+/* .prev-back{
+left:17%;
+top:320%;
+}
+
+.next-back{
+right:17%;
+top:320%;
+} */
+
+.prev-story, .next-story {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 99;
+  font-size: 4rem;
+}
+
+.prev-story {
+  left: -40px;
+}
+
+.next-story {
+  right: -40px;
+}
+
+
+/* .prev-story{
+  left:17%;
+  top:400%;
+}
+
+.next-story{
+ right:17%;
+  top:400%;
+} */
+
+.modal{
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transition: 0.25s ease-out;
+  z-index: 100; /* Higher than arrows so it covers them */
+}
+.modal.open{
+opacity: 1;
+pointer-events: all;
+}
+.modal p {
+  color: white;
+  font-size: 2rem;
+  position:absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+}
+.full-img{
+  position: absolute;
+  height: 90%;
+  top:50%;
+  left: 50%;
+  transform: translate( 50%, 50%) scale(0.5);
+  transition: all 0.25s ease-out;
+  /* margin-top: 5rem; */
+}
+
+.full-img.open{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.divider{
+  background-color: #8E6641;
+  height: 10px;
+  width: 55%;
+  border-radius: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.divider-between{
+  background-color: #8E6641;
+  height: 10px;
+  width: 30%;
+  border-radius: 30px;
+  margin-top: 40px;
+  margin-bottom: 45px;
+}
+
+/* -------------------------------------------------- */
+/* Evening's End Hero Section */
+.EE-Title{
+  font-weight: 600;
+  /* letter-spacing: 5px; */
+  /* font-size: 50px; */
+}
+.EE-Video{
+  width: 900px;
+  height: 500px;
+  margin-top:20px;
+  border-radius: 30px;
+  object-fit: cover;
+}
+.character-img{
+  width: 650px;
+  cursor: pointer;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+.character-img:hover{
+  outline: solid 10px #8E6641;
+  border-radius: 15px;
+  width: 650px;
+}
+.evening-img{
+  width: 650px;
+  height: 450px;
+  cursor: pointer;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+.evening-img:hover{
+  outline: solid 10px #8E6641;
+  border-radius: 15px;
+  width: 650px;
+  height: 450px;
+}
+.tall-img{
+  width: 650px;
+  height: 450px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+.tall-img:hover{
+  outline: solid 10px #8E6641;
+  border-radius: 15px;
+  width: 650px;
+  height: 450px;
+}
+
+.synopsis{
+  background-color: #FFE9C1;
+  width: 80rem;
+  align-items: center;
+  margin-top: 2rem;
+  border: solid #8E6641;
+  border-width: 5px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.synopsis-title{
+  font-size: 34px;
+  font-weight: 600;
+}
+.synopsis-text{
+  font-size: 24px;
+  font-weight: 300;
+  width: 76rem;
+  text-align: left;
+  margin-bottom: 4rem;
+  margin-top: 0px;
+}
+.evening-content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+/* EVENING'S END CONTENT ENDS HERE ----------------------------------------------------------------------------------------- */
 
 /* Adjust for Smaller Screens */
 @media (max-width:1425px){
@@ -1965,4 +2274,79 @@ font-size: 10px;
 }
 
 
+}
+
+
+/* Responsive adjustments for arrows on the evening ends page */
+@media (min-width: 1024px) {
+    .prev-char, .next-char {
+        display: block !important;
+    }
+    .prev-back, .next-back {
+    display: block !important;
+    }
+    .prev-story, .next-story {
+    display: block !important;
+    }
+}
+
+@media (min-width: 960px) {
+    .prev-char, .next-char {
+        display: block; /* Ensures they remain visible */
+    }
+    .prev-back, .next-back {
+    display: block; /* Ensures they remain visible */
+    }
+    .prev-story, .next-story {
+    display: block; /* Ensures they remain visible */
+    }
+}
+
+@media (max-width: 768px) {
+    .prev-char {
+        left: -30px;
+    }
+
+    .next-char {
+        right: -30px;
+    }
+    .prev-back {
+    left: -30px;
+    }
+
+    .next-back {
+        right: -30px;
+    }
+    .prev-story {
+    left: -30px;
+    }
+
+    .next-story {
+        right: -30px;
+    }
+}
+
+@media (min-width: 960px) {
+    .prev-char {
+        left: 10px; /* Make sure it's visible */
+    }
+
+    .next-char {
+        right: 10px;
+    }
+
+    .prev-back {
+    left: 10px; /* Make sure it's visible */
+    }
+
+    .next-back {
+        right: 10px;
+    }
+    .prev-story {
+    left: 10px; /* Make sure it's visible */
+    }
+
+    .next-story {
+        right: 10px;
+    }
 }
