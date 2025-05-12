@@ -1323,6 +1323,7 @@ footer img{
   flex:1;
   padding-left: 25px;
   padding-right: 25px;
+  align-items: center;
   /* padding-bottom: 20px; */
 }
 .textcard h3{
@@ -1488,7 +1489,7 @@ pointer-events: all;
 }
 .full-img{
   position: absolute;
-  height: 75%;
+  height: 85%;
   top:50%;
   left: 50%;
   transform: translate( 50%, 50%) scale(0.5);
@@ -1526,17 +1527,40 @@ pointer-events: all;
 .character-img{
   width: 650px;
   cursor: pointer;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+.character-img:hover{
+  outline: solid 10px #8E6641;
+  border-radius: 15px;
+  width: 650px;
 }
 .evening-img{
   width: 650px;
-  height: 350px;
+  height: 450px;
   cursor: pointer;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+.evening-img:hover{
+  outline: solid 10px #8E6641;
+  border-radius: 15px;
+  width: 650px;
+  height: 450px;
 }
 .tall-img{
   width: 650px;
-  height: 350px;
+  height: 450px;
   object-fit: cover;
   cursor: pointer;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+.tall-img:hover{
+  outline: solid 10px #8E6641;
+  border-radius: 15px;
+  width: 650px;
+  height: 450px;
 }
 
 .synopsis{
