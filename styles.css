@@ -1333,6 +1333,7 @@ footer img{
 .textcard p {
   font-size: 20px;
   font-weight: 300;
+  margin-top: 0px;
 }
 
 .character-intro, .background-intro, .story-intro{
@@ -1508,6 +1509,15 @@ pointer-events: all;
   border-radius: 30px;
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+.divider-between{
+  background-color: #8E6641;
+  height: 10px;
+  width: 30%;
+  border-radius: 30px;
+  margin-top: 40px;
+  margin-bottom: 45px;
 }
 
 /* -------------------------------------------------- */
